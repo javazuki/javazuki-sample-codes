@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>フォームサンプル 入力画面｜Java好きサンプルコード</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>入力フォームサンプル 入力画面</h1>
+        <hr />
+
+        <form method="post" action="#" th:action="@{./result}" th:object="${prgSampleForm}">
+          <ul>
+            <li th:each="err : ${#fields.errors('*')}" th:text="${err}" />
+          </ul>
+
+          <div class="form-group">
+            <label for="name">名前(テキスト)</label> <input type="text" class="form-control" th:field="*{name}" />
+          </div>
+          <button type="submit">送信</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

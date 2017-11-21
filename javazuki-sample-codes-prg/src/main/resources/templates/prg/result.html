@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>フォームサンプル 入力画面｜Java好きサンプルコード</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>入力フォームサンプル NEXT画面</h1>
+        <hr />
+
+        <form method="post" action="#">
+          <div class="form-group">
+            <label for="name">名前(テキスト)</label>
+            <p th:text="*{name}"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
